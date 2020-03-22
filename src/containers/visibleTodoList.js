@@ -11,6 +11,8 @@ const getVisibleTodos = (todos, filter) => {
             return todos.filter(t => t.completed)
         case VisibilityFilters.SHOW_ACTIVE:
             return todos.filter(t => !t.completed)
+        case VisibilityFilters.SHOW_IMPORTANT:
+            return todos.filter(t=> t.important)
         default:
             throw new Error('Unknown filter: ' + filter)
     }
