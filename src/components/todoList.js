@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './todo'
 
-const TodoList = ({ todos, toggleTodo }) => (
+const TodoList = ({ todos, toggleTodo,toggleImportant }) => (
     <ul>
         {todos.map(todo => (
-            <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+            <Todo key={todo.id} {...todo} onImportantClick={()=>toggleImportant(todo.id)} onClick={() => toggleTodo(todo.id)} />
         ))}
     </ul>
 )

@@ -15,6 +15,11 @@ export const toggleTodo = id => ({
     id
 })
 
+export const toggleImportant = id => ({
+    type:'TOGGLE_IMPORTANT',
+    id
+})
+
 export const VisibilityFilters = {
     SHOW_ALL: 'SHOW_ALL',
     SHOW_COMPLETED: 'SHOW_COMPLETED',
