@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Todo = ({ onClick, completed, text, onImportantClick, important }) => (
+const Todo = ({ onClick, completed, text, onImportantClick, important, onDeleteClick }) => (
     <>
     <li
         onClick={onClick}
@@ -14,6 +14,7 @@ const Todo = ({ onClick, completed, text, onImportantClick, important }) => (
 
     </li>
         <button style={{display:'inline'}} onClick={onImportantClick}>Important</button>
+        <button onClick={onDeleteClick}>Delete</button>
 
     </>
 )

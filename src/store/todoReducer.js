@@ -10,6 +10,13 @@ const todos = (state = [], action) => {
                     important:false
                 }
             ]
+        case 'DELETE_TODO':
+
+            const oldTodos = state;
+            const todoToKeep = oldTodos.filter(todo => todo.id !== action.id);
+            console.log(todoToKeep);
+return todoToKeep;
+
         case 'TOGGLE_TODO':
             return state.map(todo =>
                 todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
